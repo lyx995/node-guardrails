@@ -1,0 +1,32 @@
+{
+  "name": "node-guardrails",
+  "version": "1.0.0",
+  "description": "Three small guards against production failure modes that pass every code review: argument-spread stack overflow, rate limiting that silently degrades behind a reverse proxy, and sessions that die on every deploy.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./safe-max": "./src/safe-max.js",
+    "./client-ip": "./src/client-ip.js",
+    "./stateless-session": "./src/stateless-session.js"
+  },
+  "files": [
+    "index.js",
+    "src/"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "rate-limit",
+    "x-forwarded-for",
+    "session",
+    "hmac",
+    "stack-overflow",
+    "reverse-proxy"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
